@@ -26,7 +26,6 @@ gem 'slim-rails'
 gem 'tailwind_views_generator'
 gem 'validates_timeliness', '6.0.0.alpha1 ' # Used to validate date/time values
 # gem 'httparty'
-gem 'webmock', '~> 3.18', '>= 3.18.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -86,11 +85,12 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner'        # n+1 database test monitoring
+  gem 'database_cleaner'          # n+1 database test monitoring
   gem 'cucumber-rails', require: false
-  gem 'rails-controller-testing' # , github: 'rails/rails-controller-testing'
-  gem 'simplecov'               # generate html report on the applications test results
-  gem 'shoulda'                 # Write easy to understand and maintainable tests
+  gem 'rails-controller-testing'  # , github: 'rails/rails-controller-testing'
+  gem 'simplecov'                 # generate html report on the applications test results
+  gem 'shoulda'                   # write easy to understand and maintainable tests
+  gem 'webmock'                   # stub HTTP requests
 
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'

@@ -27,3 +27,9 @@ Rails 7.0.4
 [Geoapify](https://apidocs.geoapify.com/) - retrieves the latitude and logitude of an street address.
 
 [Tomorrow.io](https://www.weather.gov/documentation/services-web-api) - accepts latitude and longitude for location and a timestep for each API . returns a plethora of weather information including weather icons.
+
+# TO DOs before submitting
+
+- see if # frozen_string_literal: true is still needed for ruby-3.1
+- upgrade to ruby 3.1
+- clean up Gemfile

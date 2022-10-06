@@ -13,6 +13,10 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -26,6 +30,14 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+
+    # using webmock, stub all API requests to reduce calls
+    # creating a fake services in order to save sample responses for integration testing
+    # reference: https://thoughtbot.com/blog/how-to-stub-external-services-in-tests
+    config.before(:each) do
+      stub_request(:any, /api.geoapify.com/).to_rack(FakeGeoapify)
+      stub_request(:any, /data.climacell.co/).to_rack(FakeTomorrow)
+    end
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
