@@ -1,0 +1,62 @@
+{
+	"results": [
+		{
+			"country_code": "gb",
+			"street": "Upper Montagu Street",
+			"country": "United Kingdom",
+			"datasource": {
+				"sourcename": "openstreetmap",
+				"attribution": "© OpenStreetMap contributors",
+				"license": "Open Database License",
+				"url": "https://www.openstreetmap.org/copyright"
+			},
+			"state": "England",
+			"city": "London",
+			"district": "Westminster",
+			"suburb": "Marylebone",
+			"county": "Greater London",
+			"lon": -0.160493,
+			"lat": 51.520125,
+			"state_code": "ENG",
+			"postcode": "W1H 1LJ",
+			"formatted": "Upper Montagu Street, London, W1H 1LJ, United Kingdom",
+			"address_line1": "Upper Montagu Street",
+			"address_line2": "London, W1H 1LJ, United Kingdom",
+			"timezone": {
+				"name": "Europe/London",
+				"offset_STD": "+00:00",
+				"offset_STD_seconds": 0,
+				"offset_DST": "+01:00",
+				"offset_DST_seconds": 3600,
+				"abbreviation_STD": "GMT",
+				"abbreviation_DST": "BST"
+			},
+			"result_type": "street",
+			"rank": {
+				"popularity": 8.988490181891963,
+				"confidence": 0.5,
+				"confidence_city_level": 1,
+				"confidence_street_level": 1,
+				"match_type": "match_by_street"
+			},
+			"place_id": "51a8531edd088bc4bf597f6abc7493c24940c00204e203256f70656e7374726565746d61703a7374726565743a706f6c796c696e653a33373433353735",
+			"bbox": {
+				"lon1": -0.161075,
+				"lat1": 51.518836,
+				"lon2": -0.159925,
+				"lat2": 51.521411
+			}
+		}
+	],
+	"query": {
+		"text": "38 Upper Montagu Street, Westminster W1H 1LJ, United Kingdom",
+		"parsed": {
+			"housenumber": "38",
+			"street": "upper montagu street",
+			"postcode": "w1h 1lj",
+			"district": "westminster",
+			"country": "united kingdom",
+			"expected_type": "building"
+		}
+	}
+}

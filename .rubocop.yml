@@ -1,0 +1,71 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - Gemfile
+    - Guardfile
+    - Rakefile
+    - 'assets/**/*'
+    - 'benches/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'db/schema.rb'
+    - 'docs/**/*'
+    - 'hidden/**/*'
+    - 'lib/**/*'
+    - 'node_modules/**/*'
+    - 'pkg/**/*'
+    # - 'test/**/*' # Re-enable this when you want to run rubocop-spec
+    - 'spec/**/*'
+    - 'vendor/**/*'
+    - '**/**.bak'
+  TargetRubyVersion: 2.6
+  UseCache: true
+Layout/LineLength:
+  Max: 150
+Metrics/AbcSize:
+  Max: 42
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Max: 15
+# Metrics/LineLength:
+#   AllowURI: true
+#   Enabled: false
+Metrics/MethodLength:
+  CountComments: false
+  Max: 50
+Metrics/ModuleLength:
+  Max: 164
+Metrics/PerceivedComplexity:
+  Max: 14
+Style/Documentation:
+  Enabled: false
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+Style/FrozenStringLiteralComment:
+  Description: ">- Apply frozen_string_literal to the top of ruby files\nThis is for transitioniting from Ruby 2.3 to Ruby 3.0"
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+
+Style/Lambda:
+  EnforcedStyle: line_count_dependent
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+# This Cop needs to be disabled, because a large number of the the tables are READ ONLY and from production servers only
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+# Because of the cross database queries, some of the inverse associations break the queries
+Rails/InverseOf:
+  Enabled: false

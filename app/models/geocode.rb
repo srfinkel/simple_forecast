@@ -5,11 +5,13 @@ class Geocode
   require 'uri'
   require 'net/http'
 
-	url = BASRE_URI("https://api.geoapify.com/v1/geocode/search")
+	LOGGER = ActiveSupport::Logger.new(STDOUT)
+
+	url = BASE_URI("https://api.geoapify.com/v1/geocode/search")
 
 	https = Net::HTTP.new(url.host, url.port)
 	https.use_ssl = true
-
+s
 	request = Net::HTTP::Get.new(url)
 
 	response = https.request(request)

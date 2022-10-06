@@ -93,6 +93,7 @@ group :test do
   gem 'webmock'                   # stub HTTP requests
 
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'sinatra'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
