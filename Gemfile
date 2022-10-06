@@ -56,7 +56,7 @@ group :development, :test do
   gem 'factory_bot_rails'       # For building objects associated with your models
   gem 'faker'                   # for generating sample data
 
-  gem 'rspec-rails', '~> 3.9.1'
+  gem 'rspec-rails', '~> 4.0.1'
   gem 'rails_best_practices'    # for testing for rails best practice methods
   gem 'rubocop', require: false # github: 'rubocop-hq/rubocop'
   gem 'rubocop-performance', require: false     # github: 'rubocop-hq/rubocop-performance'
