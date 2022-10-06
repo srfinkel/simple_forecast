@@ -25,6 +25,7 @@ gem 'simple_form-tailwind'
 gem 'slim-rails'
 gem 'tailwind_views_generator'
 gem 'validates_timeliness', '6.0.0.alpha1 ' # Used to validate date/time values
+gem 'httparty'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
