@@ -56,6 +56,7 @@ group :development, :test do
   gem 'factory_bot_rails'       # For building objects associated with your models
   gem 'faker'                   # for generating sample data
 
+  gem 'rspec-rails', '~> 3.9.1'
   gem 'rails_best_practices'    # for testing for rails best practice methods
   gem 'rubocop', require: false # github: 'rubocop-hq/rubocop'
   gem 'rubocop-performance', require: false     # github: 'rubocop-hq/rubocop-performance'
@@ -85,7 +86,6 @@ end
 group :test do
   gem 'database_cleaner'        # n+1 database test monitoring
   gem 'cucumber-rails', require: false
-  gem 'rspec-rails', '>= 3.8'
   gem 'rails-controller-testing' # , github: 'rails/rails-controller-testing'
   gem 'simplecov'               # generate html report on the applications test results
   gem 'shoulda'                 # Write easy to understand and maintainable tests
