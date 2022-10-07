@@ -28,8 +28,12 @@ Rails 7.0.4
 
 [Tomorrow.io](https://www.weather.gov/documentation/services-web-api) - accepts latitude and longitude for location and a timestep for each API . returns a plethora of weather information including weather icons.
 
-# TO DOs before submitting
+# TO DOs for futher development
 
 - see if # frozen_string_literal: true is still needed for ruby-3.1
 - upgrade to ruby 3.1
 - clean up Gemfile
+- get Tomorrow.io icons rendering on the index page
+- fix turbo_stream bug
+- add other weather data from Tomorrow.io
+
