@@ -11,8 +11,8 @@ RSpec.feature 'External requests', type: :feature do
 
 			response = JSON.load(Net::HTTP.get(uri))
 			
-			expect(response['results'].first['lon']).to eql(-0.160493)
-			expect(response['results'].first['lat']).to eql(51.520125)
+			expect(response['results'].first['lon']).to eql(-122.0116736)
+			expect(response['results'].first['lat']).to eql(37.3306543)
 		end
 	end
 

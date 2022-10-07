@@ -1,18 +1,22 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Geocode, type: :model do
-  let(:geocode) { FactoryBot.build(:geocode) }
+  let(:location) { FactoryBot.create(:location) }
 
-	describe '.get_coordinates' do
-		it 'gets lat and long coordinates' do
+	describe '.request' do
+		it 'when location is valid' do
+			request = Geocode.request(location)
+			puts "Request: #{request}"
+			expect(request).to eq([37.330614, -122.011627])
+		end
 
-			
-			response = nil
-			geocode.get_coordinates
+		it 'when location is invalid' do
+			location.address = 'One Apple Park Way, Cupertino, CA'
+			request = Geocode.request(location)
 
-			puts "Request: #{geocode.inspect}"
-
-			expect(geocode).to be_successful  
+			expect(request).to eq('There was an issue with this request. Error: 404, Not Found')
 		end
 	end
 end

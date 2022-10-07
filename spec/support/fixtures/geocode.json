@@ -1,62 +1,62 @@
 {
 	"results": [
 		{
-			"country_code": "gb",
-			"street": "Upper Montagu Street",
-			"country": "United Kingdom",
 			"datasource": {
 				"sourcename": "openstreetmap",
 				"attribution": "© OpenStreetMap contributors",
 				"license": "Open Database License",
 				"url": "https://www.openstreetmap.org/copyright"
 			},
-			"state": "England",
-			"city": "London",
-			"district": "Westminster",
-			"suburb": "Marylebone",
-			"county": "Greater London",
-			"lon": -0.160493,
-			"lat": 51.520125,
-			"state_code": "ENG",
-			"postcode": "W1H 1LJ",
-			"formatted": "Upper Montagu Street, London, W1H 1LJ, United Kingdom",
-			"address_line1": "Upper Montagu Street",
-			"address_line2": "London, W1H 1LJ, United Kingdom",
+			"name": "Apple Park Way",
+			"street": "Apple Park Way",
+			"city": "Cupertino",
+			"county": "Santa Clara County",
+			"state": "California",
+			"postcode": "95014-0608",
+			"country": "United States",
+			"country_code": "us",
+			"lon": -122.0116736,
+			"lat": 37.3306543,
+			"state_code": "CA",
+			"formatted": "Apple Park Way, Cupertino, CA 95014-0608, United States of America",
+			"address_line1": "Apple Park Way",
+			"address_line2": "Cupertino, CA 95014-0608, United States of America",
 			"timezone": {
-				"name": "Europe/London",
-				"offset_STD": "+00:00",
-				"offset_STD_seconds": 0,
-				"offset_DST": "+01:00",
-				"offset_DST_seconds": 3600,
-				"abbreviation_STD": "GMT",
-				"abbreviation_DST": "BST"
+				"name": "America/Los_Angeles",
+				"offset_STD": "-08:00",
+				"offset_STD_seconds": -28800,
+				"offset_DST": "-07:00",
+				"offset_DST_seconds": -25200,
+				"abbreviation_STD": "PST",
+				"abbreviation_DST": "PDT"
 			},
 			"result_type": "street",
 			"rank": {
-				"popularity": 8.988490181891963,
+				"importance": 0.5,
+				"popularity": 5.015579026076875,
 				"confidence": 0.5,
 				"confidence_city_level": 1,
 				"confidence_street_level": 1,
 				"match_type": "match_by_street"
 			},
-			"place_id": "51a8531edd088bc4bf597f6abc7493c24940c00204e203256f70656e7374726565746d61703a7374726565743a706f6c796c696e653a33373433353735",
+			"place_id": "51808ea042bf805ec05911644ee152aa4240f00102f9012124f91e00000000c0020492030e4170706c65205061726b20576179",
 			"bbox": {
-				"lon1": -0.161075,
-				"lat1": 51.518836,
-				"lon2": -0.159925,
-				"lat2": 51.521411
+				"lon1": -122.0117305,
+				"lat1": 37.3305975,
+				"lon2": -122.0116046,
+				"lat2": 37.3307584
 			}
 		}
 	],
 	"query": {
-		"text": "38 Upper Montagu Street, Westminster W1H 1LJ, United Kingdom",
+		"text": "One Apple Park Way, Cupertino, CA 95014",
 		"parsed": {
-			"housenumber": "38",
-			"street": "upper montagu street",
-			"postcode": "w1h 1lj",
-			"district": "westminster",
-			"country": "united kingdom",
-			"expected_type": "building"
+			"house": "one",
+			"street": "apple park way",
+			"postcode": "95014",
+			"city": "cupertino",
+			"state": "ca",
+			"expected_type": "amenity"
 		}
 	}
 }
