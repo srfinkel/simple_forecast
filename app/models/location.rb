@@ -7,9 +7,10 @@ class Location < ApplicationRecord
 		self.address.gsub(/[', ']/, ',' => '%2C', ' ' => '%20')
 	end
 
-	# update latitude and longitude
-	def add_coordinates(lat, lon)
-		self.update(latitude: lat, longitude: lon)
-		puts "Location coordinates: #{location.inspect}"
+	# get latitude and longitude
+	def coordinates
+		lat = self.latitude
+		lon = self.longitude
+		[lat, lon].join(', ')
 	end
 end
