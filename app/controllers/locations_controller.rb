@@ -3,6 +3,8 @@ class LocationsController < ApplicationController
   
 	def index
 		@location = Location.last
+		@forecast = Forecast.request(@location)
+		puts "Forecast: #{@forecast}"
 	end
 
 	def show
@@ -17,7 +19,6 @@ class LocationsController < ApplicationController
 		coordinates = Geocode.request(@location)
 
 		@location.update(location_params.merge(latitude: coordinates.first, longitude: coordinates.last))
-
 		if @location.save
 			puts "Location has been saved! #{@location.inspect}"
 			respond_to do |format|
