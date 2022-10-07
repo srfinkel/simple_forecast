@@ -1,10 +1,7 @@
 .container
-	h2 Simple Forecast
+  .header
+    h1 Simple Forecast
+    = link_to "Search a location", new_location_path, class: "btn btn--primary", data: { turbo_frame: dom_id(Location.new) }
 
-	= simple_form_for @location, validate: true do |f|
-		= f.error_notification
-		= f.input :name, label: 'Name', error: @location.errors[:name]
-		= f.input :address, required: true, label: 'Enter street address', error: @location.errors[:address]
-		= f.submit 'Get Forecast', class: 'btn btn-warning'
-
-= render 'forecast'
+  = turbo_frame_tag Location.new
+  = render @location

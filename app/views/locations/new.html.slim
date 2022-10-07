@@ -1,0 +1,5 @@
+.container
+  = link_to sanitize("&larr; Back to Locations"), locations_path
+
+  = turbo_frame_tag @location
+    = render "form", location: @location
