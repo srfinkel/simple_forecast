@@ -1,0 +1,5 @@
+= simple_form_for @location, validate: true do |f|
+  = f.error_notification
+  = f.input :name, label: 'Name', error: @location.errors[:name]
+  = f.input :address, required: true, label: 'Enter street address', error: @location.errors[:address]
+  = f.submit 'Get Forecast', class: 'btn btn-warning'
