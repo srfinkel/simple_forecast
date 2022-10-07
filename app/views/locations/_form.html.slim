@@ -1,5 +1,6 @@
-= simple_form_for @location, validate: true do |f|
-  = f.error_notification
+= simple_form_for location do |f|
+  - if location.errors.any?
+    = f.error_notification
   = f.input :name, label: 'Name', error: @location.errors[:name]
-  = f.input :address, required: true, label: 'Enter street address', error: @location.errors[:address]
+  = f.input :address, required: true, label: 'Enter street address', input_html: { autofocus: true }, error: @location.errors[:address]
   = f.submit 'Get Forecast', class: 'btn btn-warning'

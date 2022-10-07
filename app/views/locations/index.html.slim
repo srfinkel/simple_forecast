@@ -4,4 +4,5 @@
     = link_to "Search a location", new_location_path, class: "btn btn--primary", data: { turbo_frame: dom_id(Location.new) }
 
   = turbo_frame_tag Location.new
-  = render @location
+	= turbo_frame_tag "locations"
+  	= render @location

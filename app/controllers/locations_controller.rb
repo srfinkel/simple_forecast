@@ -1,7 +1,11 @@
 class LocationsController < ApplicationController
+	before_action :set_location, only: [:show, :update]
   
 	def index
 		@location = Location.last
+	end
+
+	def show
 	end
 
 	def new
@@ -14,13 +18,30 @@ class LocationsController < ApplicationController
 
 		@location.update(location_params.merge(latitude: coordinates.first, longitude: coordinates.last))
 
-		respond_to do |format|
-			format.html { redirect_to locations_path, notice: "We were able to get your forecast" }
-			format.turbo_stream
+		if @location.save
+			puts "Location has been saved! #{@location.inspect}"
+			respond_to do |format|
+				format.html { redirect_to locations_path, notice: "What's the weather is like today?" }
+				format.turbo_stream
+			end
+		# else
+		# 	render :new, status: :unprocessable_entity
 		end
   end
 
+	def update
+		if @location.update(location_params)
+      redirect_to locations_path, notice: "location was successfully updated."
+    else
+      render :edit
+    end
+	end
+
 	private
+
+		def set_location
+			@location = Location.find(params[:id])
+		end
 
 		def location_params
 			params.require(:location).permit(:name, :address, :latitude, :longitude)
