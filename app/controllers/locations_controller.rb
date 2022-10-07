@@ -1,9 +1,18 @@
 class LocationsController < ApplicationController
-  def create
-		@location = Location.new(location_params)
-		
+  
+	def index
+		@location = Location.new
+	end
 
+	def create
+		@location = Location.new(location_params)
+		@coordinates = Geocode.request(@location)
+		logger.info "Coordinates: #{@corrdinates}"
+		@location.update(location_params.merge(latitude: @coordinates.first, longitude: @coordinates.last))
   end
+
+	def show
+	end
 
 	private
 
