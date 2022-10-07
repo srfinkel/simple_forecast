@@ -1,0 +1,7 @@
+.container
+	h2 Simple Forecast
+
+	= simple_form_for @location, validate: true do |f|
+		= f.error_notification
+		= f.input :address, required: true, label: 'Enter street address', error: @location.errors[:address]
+		= f.submit 'Get Forecast', class: 'btn btn-warning'
