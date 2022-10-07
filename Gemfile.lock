@@ -74,6 +74,8 @@ GEM
     arel-helpers (2.14.0)
       activerecord (>= 3.1.0, < 8)
     ast (2.4.2)
+    autoprefixer-rails (10.4.7.0)
+      execjs (~> 2)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -81,6 +83,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
+    bootstrap (5.2.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.6, < 3)
+      sassc-rails (>= 2.0.0)
     brakeman (5.3.1)
     builder (3.2.4)
     bullet (7.0.3)
@@ -155,6 +161,7 @@ GEM
     docile (1.4.0)
     erubi (1.11.0)
     erubis (2.7.0)
+    execjs (2.8.1)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -209,6 +216,7 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
+    popper_js (2.11.6)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -312,6 +320,14 @@ GEM
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.5.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -407,6 +423,7 @@ DEPENDENCIES
   arel-helpers
   better_errors
   bootsnap
+  bootstrap (~> 5.2, >= 5.2.1)
   brakeman
   bullet
   byebug
